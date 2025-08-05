@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Russo One', 'DIN 1451', sans-serif;
+}
+
+* {
+    cursor: url('cursor.gif'), auto !important;
+}
+
+#root {
+    min-height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}

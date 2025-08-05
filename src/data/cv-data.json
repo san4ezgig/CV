@@ -1,0 +1,98 @@
+{
+  "personalInfo": {
+    "name": "Aliaksandr Jyha",
+    "title": "Senior Fullstack Engineer",
+    "location": "Warsaw, Poland",
+    "email": "san4ezgig2@gmail.com",
+    "phone": "+48 514 434 320",
+    "linkedin": "linkedin.com/in/aliaksandr-jyha-109483164"
+  },
+  "summary": {
+    "text": "Fullstack engineer with 7+ years of experience in building scalable web applications and complex systems. Led frontend and backend initiatives from scratch, scaled MVPs to production, and built tooling that enabled teams to move faster. Proactive, fast-learning and tech-agnostic - always focused on delivering working software with impact. Looking to join a product team where I can help ship fast, iterate, and own tech decisions."
+  },
+  "techStack": {
+    "frontend": ["React", "Next.js", "Angular", "Redux", "TypeScript", "Webpack", "SCSS"],
+    "backend": ["Node.js", "Express", "GraphQL", "PostgreSQL", "Docker", "REST", "Sequelize"],
+    "devops": ["Docker", "GitHub Actions", "AWS (basic)", "CI/CD"],
+    "other": ["WebSockets", "Apollo Client", "Jest", "SCRUM", "Agile", "Monolith to Microservices"]
+  },
+  "experience": [
+    {
+      "position": "Senior Software Engineer",
+      "company": "Bayer",
+      "period": "July 2024 - Present",
+      "location": "Warsaw, Poland",
+      "responsibilities": [
+        "Improved application performance and reduced bundle size by optimizing rendering and dependencies",
+        "Enhanced system observability and stability by integrating better logging, metrics, and error tracking",
+        "Coordinated a cross-team initiative to deliver multi-app features with consistent architecture and shared components"
+      ],
+      "stack": ["Next.js", "React", "Opensearch", "AWS"]
+    },
+    {
+      "position": "Senior Software Developer",
+      "company": "Modsen",
+      "period": "October 2020 - May 2024",
+      "location": "Warsaw, Poland",
+      "responsibilities": [
+        "Built several B2B and B2C products in insurance and online travel",
+        "Took full ownership of features: from planning to production",
+        "Acted as team lead on multiple projects: code review, mentoring, estimation",
+        "Initiated internal dev-talks and introduced tooling that improved delivery speed"
+      ],
+      "stack": ["React", "Next.js", "Node.js", "GraphQL", "Docker", "PostgreSQL", "AWS"]
+    },
+    {
+      "position": "Software Developer",
+      "company": "Syberry",
+      "period": "October 2019 - October 2020",
+      "location": "",
+      "responsibilities": [
+        "Built food delivery and e-learning platforms with complex business logic",
+        "Delivered cross-platform apps using React Native and Ionic"
+      ],
+      "stack": ["React", "React Native", "TypeScript", "WebSockets", "REST"]
+    },
+    {
+      "position": "Software Developer",
+      "company": "bitnet",
+      "period": "March 2019 - October 2019",
+      "location": "",
+      "responsibilities": [
+        "Developed an online sportsbook platform from scratch",
+        "Optimized rendering and state management for real-time betting"
+      ],
+      "stack": ["React", "Redux-Saga", "Webpack", "SCSS"]
+    },
+    {
+      "position": "Software Engineer",
+      "company": "EPAM Systems",
+      "period": "October 2018 - March 2019",
+      "location": "",
+      "responsibilities": [
+        "Created UI components for large enterprise systems",
+        "Communicated directly with clients, participated in planning and demos"
+      ],
+      "stack": ["React", "Polymer", "Jest", "WebSockets", "SCRUM"]
+    }
+  ],
+  "education": {
+    "institution": "Belarusian State University",
+    "degree": "Bachelor's in Applied Mathematics and Computer Science",
+    "period": "2015-2019"
+  },
+  "languages": [
+    {
+      "language": "Russian",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "B2 (speaking, writing, tech communication)"
+    },
+    {
+      "language": "Polish",
+      "level": "A2-B1"
+    }
+  ]
+} 

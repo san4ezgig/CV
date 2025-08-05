@@ -1,0 +1,178 @@
+# CV Project Cursor Rules
+
+## Project Overview
+This is a retro gaming-themed CV/portfolio website built with React 19, TypeScript, Vite, and Tailwind CSS 4.x. The project features responsive design, dynamic positioning, and interactive elements with a nostalgic aesthetic.
+
+## Core Technologies
+- **Frontend**: React 19 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS 4.x
+- **Package Manager**: npm
+
+## Code Style & Conventions
+
+### TypeScript & React
+- Use functional components with React hooks
+- Always define proper TypeScript types and interfaces
+- Use `type` for component props, `interface` for data structures
+- Prefer explicit typing over `any`
+- Use `useMemo` for expensive calculations
+- Use `useRef` for DOM element references
+- Use `useState` for component state
+- Use `useEffect` with proper dependency arrays
+
+### Component Patterns
+```typescript
+// Good: Proper component structure
+type ComponentProps = {
+  isVisible: boolean;
+  onClose: () => void;
+  children?: ReactNode;
+};
+
+const Component = ({ isVisible, onClose, children }: ComponentProps) => {
+  const [state, setState] = useState<string>('');
+  
+  useEffect(() => {
+    // Effect logic with cleanup
+    return () => {
+      // Cleanup
+    };
+  }, [dependency]);
+
+  return (
+    <div className="tailwind-classes">
+      {children}
+    </div>
+  );
+};
+
+export default Component;
+```
+
+### File Organization
+- **Components**: Place in `src/components/` with PascalCase names
+- **Data**: Store JSON data in `src/data/`
+- **Assets**: Store in `public/` for static assets
+- **Types**: Define inline with components or in dedicated type files
+- **Utilities**: Create utility functions in separate files when needed
+
+### Naming Conventions
+- **Components**: PascalCase (`MainMenu.tsx`, `CVModal.tsx`)
+- **Files**: PascalCase for components, camelCase for utilities
+- **Variables/Functions**: camelCase (`activeIndex`, `handleKeyDown`)
+- **Constants**: SCREAMING_SNAKE_CASE for true constants
+- **Props**: Descriptive names with proper typing
+
+### Styling Guidelines
+- **Primary**: Use Tailwind CSS classes
+- **Custom Assets**: Reference from `/public` directory using absolute paths
+- **Responsive**: Use Tailwind responsive prefixes (`md:`, `lg:`)
+- **Colors**: Stick to project color scheme (green-400, yellow-300, gray-800)
+- **Animations**: Use Tailwind transition classes
+
+### Code Quality
+- **NO COMMENTS**: Write self-documenting, readable code instead
+- **Readable code**: Use descriptive variable and function names
+- **Single Responsibility**: Each function/component should have one clear purpose
+- **DRY Principle**: Avoid code duplication
+- **KISS Principle**: Keep solutions simple and straightforward
+- **No Hacky Solutions**: Always implement proper, maintainable solutions
+
+### State Management
+- Use React's built-in state management (useState, useEffect)
+- Pass props down, lift state up when needed
+- Use refs for DOM manipulation
+- Implement proper cleanup in useEffect
+
+### Event Handling
+- Use proper TypeScript event types (`KeyboardEvent`, `MouseEvent`)
+- Implement keyboard navigation where appropriate
+- Handle resize events with ResizeObserver
+- Clean up event listeners in useEffect cleanup
+
+### Performance
+- Use `useMemo` for expensive calculations
+- Use `useCallback` for event handlers when needed
+- Optimize re-renders by managing dependencies properly
+- Use ResizeObserver for responsive behavior
+
+### Accessibility
+- Use semantic HTML elements
+- Implement keyboard navigation
+- Provide proper alt text for images
+- Use ARIA attributes when necessary
+
+### Error Handling
+- Use `.catch()` for promise-based operations
+- Handle edge cases (null/undefined checks)
+- Graceful degradation for missing assets
+
+### Data Handling
+- Store structured data in JSON files
+- Use proper TypeScript interfaces for data shapes
+- Import data as modules, not fetch at runtime
+
+## Project-Specific Rules
+
+### Background & Positioning
+- Use `getCoveredBackgroundPointCoords` for responsive positioning
+- Implement ResizeObserver for dynamic layouts
+- Handle both container and window resize events
+
+### Asset Management
+- Store images in `/public` directory
+- Use absolute paths (`/image.png`) for asset references
+- Optimize asset loading (preload for audio, proper image formats)
+
+### Retro Gaming Theme
+- Maintain pixel-perfect styling with background images
+- Use appropriate fonts and colors for the aesthetic
+- Implement hover states and transitions for interactivity
+
+### Responsive Design
+- Mobile-first approach with Tailwind breakpoints
+- Test on different screen sizes
+- Ensure proper scaling of background images and positioning
+
+## Architecture Patterns
+
+### Component Composition
+- Keep components focused and reusable
+- Use props for configuration
+- Implement proper children patterns
+
+### Data Flow
+- Props down, events up
+- Use local state for component-specific state
+- Share data through props or context when needed
+
+### File Structure
+```
+src/
+├── components/          # Reusable UI components
+├── data/               # JSON data files
+├── assets/             # Build-time assets (rare)
+└── main.tsx           # Application entry point
+public/                 # Static assets
+```
+
+## Forbidden Patterns
+- No `any` types without explicit justification
+- No inline styles unless absolutely necessary (use Tailwind)
+- No console.log in production code
+- No hacky workarounds - implement proper solutions
+- No unnecessary comments - write readable code
+- No magic numbers - use named constants
+- No overly complex nested ternary operators
+
+## Best Practices
+- Follow SOLID principles
+- Implement proper error boundaries for production
+- Use semantic versioning for dependencies
+- Test responsive behavior across devices
+- Validate TypeScript with strict mode
+- Use ESLint configuration provided in the project
+- Prefer composition over inheritance
+- Keep functions pure when possible
+- Handle loading and error states appropriately 

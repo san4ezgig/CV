@@ -1,0 +1,55 @@
+{
+  "name": "retro-gaming-cv",
+  "description": "A nostalgic retro gaming-themed CV/portfolio website built with React 19, TypeScript, and Tailwind CSS",
+  "version": "1.0.0",
+  "type": "module",
+  "author": {
+    "name": "Aliaksandr Jyha",
+    "email": "san4ezgig2@gmail.com",
+    "url": "https://linkedin.com/in/aliaksandr-jyha-109483164"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/san4ezgig/CV.git"
+  },
+  "homepage": "https://san4ezgig.github.io/CV",
+  "keywords": [
+    "portfolio",
+    "cv",
+    "retro-gaming",
+    "react",
+    "typescript",
+    "vite",
+    "tailwindcss",
+    "responsive"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.35.1",
+    "vite": "^7.0.4"
+  }
+}
