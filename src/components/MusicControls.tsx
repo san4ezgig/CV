@@ -24,10 +24,10 @@ const MusicControls = ({ className = '', scale = 1 }: MusicControlsProps) => {
     setIsMusicEnabled(prev => !prev);
   };
 
-  const getCheckboxImageSrc = () => {
-    if (isMusicEnabled) return '/checkbox_active.png';
-    if (isHovered) return '/checkbox_hovered.png';
-    return '/checkbox.png';
+  const getBackgroundClass = () => {
+    if (isMusicEnabled) return 'bg-[url(/checkbox_active.png)]';
+    if (isHovered) return 'bg-[url(/checkbox_hovered.png)]';
+    return 'bg-[url(/checkbox.png)]';
   };
 
   return (
@@ -44,10 +44,8 @@ const MusicControls = ({ className = '', scale = 1 }: MusicControlsProps) => {
         onMouseLeave={() => setIsHovered(false)}
         onClick={handleMusicToggle}
       >
-        <img 
-          src={getCheckboxImageSrc()} 
-          alt={isMusicEnabled ? 'Music On' : 'Music Off'} 
-          className="relative z-10 transition-transform duration-200 ease-in-out hover:scale-105"
+        <div 
+          className={`relative z-10 transition-transform duration-200 ease-in-out hover:scale-105 ${getBackgroundClass()} bg-cover bg-center bg-no-repeat`}
           style={{
             width: `${24 * scale}px`,
             height: `${24 * scale}px`
@@ -57,7 +55,7 @@ const MusicControls = ({ className = '', scale = 1 }: MusicControlsProps) => {
       </button>
       <audio 
         ref={audioRef}
-        src="/music.mp3"
+        src={`${import.meta.env.BASE_URL}music.mp3`}
         loop
         preload="auto"
       />

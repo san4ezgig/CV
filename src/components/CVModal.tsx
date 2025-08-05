@@ -31,11 +31,8 @@ const CVModal = ({ isOpen, onClose, title, children }: CVModalProps) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
       <div 
-        className="relative p-8 rounded-lg overflow-y-auto max-h-[90vh]" 
+        className="relative p-8 rounded-lg overflow-y-auto max-h-[90vh] bg-[url(/popup_background.png)] bg-cover bg-center" 
         style={{ 
-          backgroundImage: 'url(/popup_background.png)', 
-          backgroundSize: 'cover', 
-          backgroundPosition: 'center',
           width: '650px', 
           height: '600px'
         }}
@@ -45,17 +42,15 @@ const CVModal = ({ isOpen, onClose, title, children }: CVModalProps) => {
           {children}
         </div>
         <button 
-          className="absolute bottom-12 right-6 bg-transparent border-none cursor-pointer hover:rotate-6 transition duration-300 ease-in-out flex items-center justify-center"
+          className="absolute bottom-12 right-6 bg-transparent border-none cursor-pointer hover:rotate-6 transition duration-300 ease-in-out flex items-center justify-center w-[170px] h-12"
           onClick={onClose}
           onMouseEnter={() => setIsButtonHovered(true)}
           onMouseLeave={() => setIsButtonHovered(false)}
         >
-          <img 
-            src={isButtonHovered ? "/button_hovered.png" : "/button.png"} 
-            alt="Close Button Background" 
-            className="w-[170px] h-12" 
+          <div 
+            className={`absolute inset-0 w-full h-full ${isButtonHovered ? 'bg-[url(/button_hovered.png)]' : 'bg-[url(/button.png)]'} bg-cover bg-center bg-no-repeat`}
           />
-          <span className={`absolute font-bold ${isButtonHovered ? 'text-black' : 'text-white'}`}>Close</span>
+          <span className={`absolute font-bold z-10 ${isButtonHovered ? 'text-black' : 'text-white'}`}>Close</span>
         </button>
       </div>
     </div>

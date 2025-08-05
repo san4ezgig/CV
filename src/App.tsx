@@ -10,7 +10,7 @@ function App() {
       <div ref={desktopContainerRef} className="hidden md:block relative h-full w-full bg-cover bg-left bg-no-repeat bg-[url(/background.png)]">
         <video 
           className="absolute top-0 right-0 w-1/2 h-3/4 object-cover -z-10"
-          src="/background_video.mp4"
+          src={`${import.meta.env.BASE_URL}background_video.mp4`}
           autoPlay
           loop
           muted

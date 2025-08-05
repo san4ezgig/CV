@@ -16,10 +16,10 @@ const Checkbox = ({ checked, onChange, label, disabled = false }: CheckboxProps)
     }
   };
 
-  const getImageSrc = () => {
-    if (checked) return '/checkbox_active.png';
-    if (isHovered && !disabled) return '/checkbox_hovered.png';
-    return '/checkbox.png';
+  const getBackgroundClass = () => {
+    if (checked) return 'bg-[url(/checkbox_active.png)]';
+    if (isHovered && !disabled) return 'bg-[url(/checkbox_hovered.png)]';
+    return 'bg-[url(/checkbox.png)]';
   };
 
   return (
@@ -28,16 +28,10 @@ const Checkbox = ({ checked, onChange, label, disabled = false }: CheckboxProps)
       onClick={handleClick}
     >
       <div
-        className="flex-shrink-0 transition-transform duration-200 ease-in-out hover:scale-105"
+        className={`flex-shrink-0 transition-transform duration-200 ease-in-out hover:scale-105 w-6 h-6 ${getBackgroundClass()} bg-cover bg-center bg-no-repeat`}
         onMouseEnter={() => !disabled && setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-      >
-        <img 
-          src={getImageSrc()} 
-          alt={checked ? 'Checked' : 'Unchecked'} 
-          className="w-6 h-6" 
-        />
-      </div>
+      />
       {label && (
         <span className={`select-none ${disabled ? 'text-gray-400' : 'text-white'}`}>
           {label}

@@ -185,12 +185,8 @@ const MainMenu = ({ containerRef }: MainMenuProps) => {
   return (
     <>
         <ul 
-          className="absolute aspect-[281/338] flex flex-col text-center text-black z-10 font-bold tracking-wider list-none"
+          className="absolute aspect-[281/338] flex flex-col text-center text-black z-10 font-bold tracking-wider list-none bg-[url(/menu_background.png)] bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/menu_background.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
             width: `${menuLayout.width}px`,
             left: `${menuLayout.x}px`,
             top: `${menuLayout.y}px`,
@@ -212,7 +208,7 @@ const MainMenu = ({ containerRef }: MainMenuProps) => {
                 }}
               >
                 {activeIndex === index && (
-                  <img src="/item_background.png" alt="background" className="absolute inset-0 w-full h-full pointer-events-none z-0" />
+                  <div className="absolute inset-0 w-full h-full pointer-events-none z-0 bg-[url(/item_background.png)] bg-cover bg-center bg-no-repeat" />
                 )}
                 <div className="relative z-10">
                   {item}
